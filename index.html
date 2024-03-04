@@ -9,6 +9,7 @@
     <header>
         <h1>Michał Szcząchor</h1>
         <p>Game Programmer</p>
+        <a href="#contact">Contact</a>
     </header>
 
     <section class="About">
@@ -16,17 +17,46 @@
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
     </section>
 
-    <section class="Projects">
+    <section class="projects" id="projects-section">
         <h2>Projects</h2>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-        <a href=""><button>Read More</button></a>
+        <button onclick="toggleProjects()">Read More</button>
+
+        <div class="projects-expanded" id="expanded-projects">
+            <section class="">
+                <h3>Futuregames Projects</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                <div class="project-list">
+                    <h4>GP1</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                </div>
+            </section>
+
+            <section class="">
+                <h3>Gamejam Projects</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            </section>
+
+            <section class="">
+                <h3>Personal Projects</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            </section>
+        </div>
     </section>
 
-    <section class="Contact">
+    <section class="Contact" id="contact">
         <h2>Contact</h2>
         <p>Email: szczachormi265@gmail.com</p>
         <p>LinkedIn: <a href="https://www.linkedin.com/in/michał-szcząchor-769586294/" target="_blank">Michał Szcząchor</a></p>
-        <p>GitHub: <a href="https://github.com/Mikehey265" target="_blank">Mikehey265</a> </p>
+        <p>GitHub: <a href="https://github.com/Mikehey265" target="_blank">Mikehey265</a></p>
+        <p>Itch.io: <a href="https://mikehey.itch.io" target="_blank">Mikehey</a></p>
     </section>
+
+    <script>
+        function toggleProjects(){
+            var expandedProjects = document.getElementById('expanded-projects');
+            expandedProjects.classList.toggle('show');
+        }
+    </script>
 </body>
 </html>
