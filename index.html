@@ -3,59 +3,70 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
-    <title>Michał Szcząchor Portfolio</title>
+    <title>Document</title>
 </head>
 <body>
+
     <header>
-        <h1>Michał Szcząchor</h1>
-        <p>Game Programmer</p>
-        <a href="#contact">Contact</a>
+        <nav class = "navbar">
+            <a href="#" onclick="showAboutMe(); return false;">About Me</a>
+            <a href="#" onclick="showGameProjects(); return false;">Game Projects</a>
+            <a href="#" onclick="showContact(); return false;">Contact</a>
+        </nav>
     </header>
 
-    <section class="About">
-        <h2>About Me</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-    </section>
-
-    <section class="projects" id="projects-section">
-        <h2>Projects</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-        <button onclick="toggleProjects()">Read More</button>
-
-        <div class="projects-expanded" id="expanded-projects">
-            <section class="">
-                <h3>Futuregames Projects</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                <div class="project-list">
-                    <h4>GP1</h4>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                </div>
-            </section>
-
-            <section class="">
-                <h3>Gamejam Projects</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-            </section>
-
-            <section class="">
-                <h3>Personal Projects</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-            </section>
+    <main>
+        <div id = "aboutMe" class = "container">
+            <h1>Hello!</h1>
+            <div class = "paragraph">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p><br>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p><br>
+            </div>
+            <div class = "photo">
+                <img src="photo.jpg">
+            </div>
         </div>
-    </section>
 
-    <section class="Contact" id="contact">
-        <h2>Contact</h2>
-        <p>Email: szczachormi265@gmail.com</p>
-        <p>LinkedIn: <a href="https://www.linkedin.com/in/michał-szcząchor-769586294/" target="_blank">Michał Szcząchor</a></p>
-        <p>GitHub: <a href="https://github.com/Mikehey265" target="_blank">Mikehey265</a></p>
-        <p>Itch.io: <a href="https://mikehey.itch.io" target="_blank">Mikehey</a></p>
-    </section>
+        <div id = "gameProjects" class="container" style="display: none;">
+            <h1>Game Projects</h1>
+            <div class="paragraph">
+                <p>List of game projects...</p>
+            </div>
+        </div>
 
+        <div id = "contact" class="container" style="display: none;">
+            <h1>Contact</h1>
+            <div class="paragraph">
+                <p>Contact information...</p>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; Michał Szcząchor</p>
+    </footer>
+    
     <script>
-        function toggleProjects(){
-            var expandedProjects = document.getElementById('expanded-projects');
-            expandedProjects.classList.toggle('show');
+        function showAboutMe(){
+            hideAll();
+            document.getElementById('aboutMe').style.display = 'block';
+        }
+
+        function showGameProjects() {
+            hideAll();
+            document.getElementById('gameProjects').style.display = 'block';
+        }
+
+        function showContact() {
+            hideAll();
+            document.getElementById('contact').style.display = 'block';
+        }
+
+        function hideAll() {
+            var containers = document.querySelectorAll('.container');
+            containers.forEach(function(container) {
+                container.style.display = 'none';
+            });
         }
     </script>
 </body>
