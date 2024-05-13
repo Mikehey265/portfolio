@@ -9,6 +9,20 @@ html {
     scroll-behavior: smooth;
 }
 
+h1{
+    margin-top: 0.67em;
+    margin-bottom: 250px;
+    line-height: .7em;
+    font-size: 5.5em;
+    font-weight: 100;
+    color: #d18d8d;
+}
+
+p{
+    line-height: 1.8em;
+    font-size: 1.1em;
+}
+
 header{
     position: fixed;
     top: 0;
@@ -49,8 +63,8 @@ main{
 .container{
     display: block;
     max-width: 1200px;
-    padding-top: 10px;
-    margin: 120px 10px 240px;
+    padding-top: 60px;
+    margin: 120px 10px 200px;
     text-align: left;
     color: #dcdcdc;
 }
@@ -58,8 +72,8 @@ main{
 .flex-container{
     display: flex;
     flex-direction: row;
-    justify-content: space-between; /* Add space between items */
-    align-items: center; /* Center items vertically */
+    justify-content: space-between;
+    align-items: center;
 }
 
 .paragraph{
@@ -80,14 +94,16 @@ main{
     width: calc(50% - 16px);
     margin: 8px;
     float: left;
-    background-color: #333;
+    background-color: #1c1616;
     overflow: hidden;
+    height: auto;
 }
 
 .project-button img{
     max-width: 100%;
     height: auto;
     display: block;
+    transition: opacity 0.3s ease;
 }
 
 .project-button p{
@@ -107,6 +123,7 @@ main{
 .project-button a{
     text-decoration: none;
     position: relative;
+    display: block;
 }
 
 .button-container::after{
@@ -116,18 +133,63 @@ main{
     clear: both;
 }
 
-h1{
-    margin-top: 0.67em;
-    margin-bottom: 250px;
-    line-height: .7em;
-    font-size: 5.5em;
-    font-weight: 100;
-    color: #d18d8d;
+.image-container {
+    position: relative;
+    overflow: hidden;
+    height: 27vh;
 }
 
-p{
-    line-height: 1.8em;
-    font-size: 1.1em;
+.image-container img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: opacity 0.3s ease;
+}
+
+.static-image {
+    opacity: 1;
+}
+
+.gif {
+    opacity: 0;
+}
+
+.project-button:hover .gif {
+    opacity: 1;
+}
+
+.project-button:hover .static-image {
+    opacity: 0;
+}
+
+.info-bar-bottom {
+    background-color: #1c1616;
+    color: #fff;
+    margin: 10px;
+    padding: 5px;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+}
+
+.info-bar-bottom ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+.info-bar-bottom ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+.info-bar-bottom ul li i{
+    display: inline;
+    margin-right: 5px;
+    color: #d18d8d;
 }
 
 .contact-list{
