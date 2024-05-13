@@ -1,7 +1,7 @@
 body{
     margin: 0 auto;
     width: 100%;
-    background-color: #161616;
+    background-color: #211b1b;
     font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -14,13 +14,12 @@ header{
     top: 0;
     left: 0;
     width: 100%;
-    background-color: #7d1e8c;
-    color: #6c6c6c;
+    background-color: #211b1b;
     z-index: 999;
 }
 
 header a{
-    color: #6c6c6c;
+    color: #d18d8d;
     text-decoration: none;
     margin: 0 10px;
     border: 2px solid transparent;
@@ -56,15 +55,24 @@ main{
     color: #dcdcdc;
 }
 
+.flex-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between; /* Add space between items */
+    align-items: center; /* Center items vertically */
+}
+
 .paragraph{
-    float: left;
-    max-width: 700px;
+    flex: 1;
+    max-width: 30%;
     margin-bottom: 20px;
 }
 
 .photo{
     margin-left: 20px;
     text-align: center;
+    flex: 1;
+    max-width: 70%;
 }
 
 .project-button{
@@ -92,7 +100,7 @@ main{
 .project-button .game-title{
     text-align: left;
     margin: 15px;
-    color: #e29ba7;
+    color: #d18d8d;
     font-size: 1.6em;
 }
 
@@ -110,10 +118,11 @@ main{
 
 h1{
     margin-top: 0.67em;
-    margin-bottom: 60px;
+    margin-bottom: 250px;
     line-height: .7em;
-    font-size: 2.5em;
+    font-size: 5.5em;
     font-weight: 100;
+    color: #d18d8d;
 }
 
 p{
@@ -136,20 +145,20 @@ p{
 }
 
 .contact-list li {
-    padding-left: 20px;
     position: relative;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
 }
 
 .contact-list li i{
     margin-right: 10px;
+    color: #d18d8d;
 }
 
 footer{
     bottom: 0;
     width: 100%;
-    background-color: #333;
-    color: #6c6c6c;
+    background-color: #211b1b;
+    color: #d18d8d;
     text-align: center;
     padding: 10px 0;
 }
@@ -160,6 +169,10 @@ footer{
     .navbar {
         text-align: center;
     }
+    .flex-container {
+        flex-direction: column;
+        align-items: center;
+    }
     .container {
         margin: 80px 10px 200px;
     }
@@ -167,8 +180,17 @@ footer{
         width: 100%;
         margin: 8px 0;
     }
+    .paragraph{
+        max-width: 100%;
+        text-align: center;
+    }
     .photo {
-        margin-left: 0;
+        max-width: 100%;
+        margin: 20 0 0;
+    }
+    h1{
+        font-size: 4.5em;
+        margin-bottom: 150px;
     }
 }
 
