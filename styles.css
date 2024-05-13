@@ -1,15 +1,22 @@
 body{
     margin: 0 auto;
-    padding-bottom: 50px;
     width: 100%;
-    background-color: #383838;
+    background-color: #161616;
     font-family: Arial, Helvetica, sans-serif;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 header{
-    max-width: 1200px;
-    margin: 0 auto;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #7d1e8c;
     color: #6c6c6c;
+    z-index: 999;
 }
 
 header a{
@@ -31,6 +38,7 @@ header a.active {
 .navbar{
     padding: 20px;
     text-align: right;
+    display: block;
     line-height: 3em;
 }
 
@@ -41,6 +49,9 @@ main{
 
 .container{
     display: block;
+    max-width: 1200px;
+    padding-top: 10px;
+    margin: 120px 10px 240px;
     text-align: left;
     color: #dcdcdc;
 }
@@ -52,15 +63,54 @@ main{
 }
 
 .photo{
-    float: right;
-    margin-top: 50px;
     margin-left: 20px;
     text-align: center;
 }
 
+.project-button{
+    position: relative;
+    width: calc(50% - 16px);
+    margin: 8px;
+    float: left;
+    background-color: #333;
+    overflow: hidden;
+}
+
+.project-button img{
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+.project-button p{
+    text-align: left;
+    margin: 10 10 15px;
+    font-size: 1em;
+    color: #dcdcdc;
+}
+
+.project-button .game-title{
+    text-align: left;
+    margin: 15px;
+    color: #e29ba7;
+    font-size: 1.6em;
+}
+
+.project-button a{
+    text-decoration: none;
+    position: relative;
+}
+
+.button-container::after{
+    content: "";
+    padding: 30 0;
+    display: table;
+    clear: both;
+}
+
 h1{
     margin-top: 0.67em;
-    margin-bottom: 80px;
+    margin-bottom: 60px;
     line-height: .7em;
     font-size: 2.5em;
     font-weight: 100;
@@ -71,17 +121,74 @@ p{
     font-size: 1.1em;
 }
 
-img{
-    overflow: clip;
-    overflow-clip-margin: content-box;
+.contact-list{
+    list-style: none;
+    padding: 0;
+    font-size: 2vh;
+}
+
+.contact-list li a {
+    text-decoration: none;
+}
+
+.contact-list li a:visited{
+    color: inherit;
+}
+
+.contact-list li {
+    padding-left: 20px;
+    position: relative;
+    margin-bottom: 10px;
+}
+
+.contact-list li i{
+    margin-right: 10px;
 }
 
 footer{
-    position: absolute;
     bottom: 0;
     width: 100%;
     background-color: #333;
     color: #6c6c6c;
     text-align: center;
     padding: 10px 0;
+}
+
+/* Media Queries */
+
+@media (max-width: 767px) {
+    .navbar {
+        text-align: center;
+    }
+    .container {
+        margin: 80px 10px 200px;
+    }
+    .project-button {
+        width: 100%;
+        margin: 8px 0;
+    }
+    .photo {
+        margin-left: 0;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1199px) {
+    .project-button {
+        width: 100%;
+        margin: 20px 0;
+    }
+    .container {
+        margin: 100px 20px 220px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .project-button img{
+        max-width: 100%;
+        height: 27vh;
+        display: block;
+    }
+    .container {
+        margin: 120px 40px 240px;
+    }
 }

@@ -2,6 +2,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/c0c519108a.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="styles.css">
     <title>Document</title>
 </head>
@@ -9,9 +10,9 @@
 
     <header>
         <nav class = "navbar">
-            <a href="#" onclick="showAboutMe(); return false;">About Me</a>
-            <a href="#" onclick="showGameProjects(); return false;">Game Projects</a>
-            <a href="#" onclick="showContact(); return false;">Contact</a>
+            <a href="#aboutMe">About Me</a>
+            <a href="#gameProjects">Game Projects</a>
+            <a href="#contact">Contact</a>
         </nav>
     </header>
 
@@ -19,55 +20,112 @@
         <div id = "aboutMe" class = "container">
             <h1>Hello!</h1>
             <div class = "paragraph">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p><br>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p><br>
+                <p>My name is Michał Szcząchor. I'm currently pursuing diploma in game development to enhance skills. I love creating games as much as I love playing them.</p>
+                <p>I have created two fully functional games as game projects at Futuregames, currently working on the third one (the biggest one yet). I also participated in game jams as well as created some side projects before and during my time at Futuregames.</p>
+                <p>I always enjoy learning new things, writing effective, well-organized code, work solo or with team and I'm always eager to take on new challenges. </p>
             </div>
             <div class = "photo">
-                <img src="photo.jpg">
+                <img src="Images/photo.jpg">
             </div>
         </div>
-
-        <div id = "gameProjects" class="container" style="display: none;">
+        
+        <div id="gameProjects" class="container">
             <h1>Game Projects</h1>
-            <div class="paragraph">
-                <p>List of game projects...</p>
+            <h2>Futuregames projects</h2>
+            <p>Culmination of knowledge gained throughout years of learning, Futuregames projects are team-based, weeks-long and shipped at the end of development.</p>
+
+            <div class="button-container">
+
+                <div class="project-button">
+                    <a href="#">
+                        <img src="Images/ss.png" alt="Summit Sprint">
+                        <p class="game-title">Summit Sprint (2024)</p>
+                        <p>This game was made during our second game project at Futuregames. As a climber, you will try to reach the peak of the mountains as fast as possible. Climb and jump among rocks, manage to get enough chalk and not to fall from the cliff.</p>
+                    </a>
+                </div>
+
+                <div class="project-button">
+                    <a href="#">
+                        <img src="Images/yori.png" alt="Yori">
+                        <p class="game-title">Yori (2023)</p>
+                        <p>This game was made during our first game project at Futuregames. Explore the deserted halls of an eerie magical school through the eyes of sleepy Yori—the student who overslept and is trying to make it to class on time.</p>
+                    </a>
+                </div>
+
             </div>
+
+            <h2>Side Projects</h2>
+            <p>Games I made taking various additional courses, playing around in engine or working together with other students in our free time. Most of these games are work in progress.</p>
+
+            <div class="button-container">
+
+                <div class="project-button">
+                    <a href="#">
+                        <img src="Images/cr.png" alt="Crypt Raider">
+                        <p class="game-title">Crypt Raider (2024)</p>
+                        <p>My first working game made in Unreal Engine 5. Project made with course from GameDev.tv </p>
+                    </a>
+                </div>
+
+                <div class="project-button">
+                    <a href="#">
+                        <img src="" alt="Tank Game">
+                        <p class="game-title">Tank Game (2024)</p>
+                        <p>Game in the making by bunch of Futuregames students. Project is in early stage of development.</p>
+                    </a>
+                </div>
+
+            </div>
+
+            <div class="button-container">
+
+                <div class="project-button">
+                    <a href="#">
+                        <img src="Images/il2.png" alt="Ilander">
+                        <p class="game-title">Ilander 2.0 (2023)</p>
+                        <p>This game was made as a project for finishing first course in Futuregames. </p>
+                    </a>
+                </div>
+
+                <div class="project-button">
+                    <a href="#">
+                        <img src="Images/kc.png" alt="Kitchen Chaos">
+                        <p class="game-title">Kitchen Chaos (2022)</p>
+                        <p>This game was made with course from CodeMonkey. Really great journey of mastering unity skills and playable final product.</p>
+                    </a>
+                </div>
+
+            </div>
+
+            <h2>GameJam Projects</h2>
+            <p>Games made for various game jams.</p>
+
+            <div class="button-container">
+
+                <div class="project-button">
+                    <a href="#">
+                        <img src="Images/lm.png" alt="Little Maria">
+                        <p class="game-title">Little Maria (2024)</p>
+                        <p>Game made for PolyGam 2024 </p>
+                    </a>
+                </div>
+
+            </div>
+
         </div>
 
-        <div id = "contact" class="container" style="display: none;">
+        <div id="contact" class="container">
             <h1>Contact</h1>
-            <div class="paragraph">
-                <p>Contact information...</p>
-            </div>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p><br>
+            <ul class="contact-list">
+                <li><i class="fa-brands fa-linkedin"></i><a href="https://www.linkedin.com/in/michalszczachor/">linkedin.com/michalszczachor</a></li>
+                <li><i class="fa-brands fa-github"></i><a href="https://github.com/Mikehey265">github.com/Mikehey265</a></li>
+                <li><i class="fa-brands fa-itch-io"></i><a href="https://mikehey.itch.io">mikehey.itch.io</a></li>
+            </ul>
         </div>
     </main>
-
     <footer>
         <p>&copy; Michał Szcząchor</p>
-    </footer>
-    
-    <script>
-        function showAboutMe(){
-            hideAll();
-            document.getElementById('aboutMe').style.display = 'block';
-        }
-
-        function showGameProjects() {
-            hideAll();
-            document.getElementById('gameProjects').style.display = 'block';
-        }
-
-        function showContact() {
-            hideAll();
-            document.getElementById('contact').style.display = 'block';
-        }
-
-        function hideAll() {
-            var containers = document.querySelectorAll('.container');
-            containers.forEach(function(container) {
-                container.style.display = 'none';
-            });
-        }
-    </script>
+    </footer>        
 </body>
 </html>
