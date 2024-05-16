@@ -211,6 +211,40 @@ header a.active {
     color: #d18d8d;
 }
 
+.button-group {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.custom-button-link {
+    flex: 1;
+    margin: 0 5px;
+    text-decoration: none;
+}
+
+.custom-button {
+    width: 100%;
+    padding: 10px;
+    color: #dcdcdc;
+    background-color: #211b1b;
+    border: 2px solid #d18d8d;
+    border-radius: 5px;
+    font-size: 1em;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.custom-button:hover {
+    background-color: #d18d8d;
+    color: #211b1b;
+}
+
+.button-group .custom-button-link:only-child {
+    flex: 0 0 100%;
+    margin: 0;
+}
 .contact-list{
     list-style: none;
     background-image: url(Artboard\ 10.svg);
